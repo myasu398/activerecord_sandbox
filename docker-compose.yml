@@ -5,3 +5,9 @@ services:
     build: .
     volumes:
       - .:/app
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: test_database
